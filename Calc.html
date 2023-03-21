@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Valor dos Resistores </title>
+    <style>
+        #resultado{
+            width: 100px;
+            height: 20px;
+            background-color: white;
+            border-radius: 8px;
+            border: solid 2px #7d9ba3d1;
+        }
+    </style>
+</head>
+<body>
+    <header><h2 > Valores de resistores </h2></header>
+    <form>
+        <p> <label for="fax1" > Faixa 1: </label>
+        <select name="cor1" id="faixa1">
+            <option value="0"> Preto </option>
+            <option value="1"> Marrom </option>
+            <option value="2"> Vermelho </option>
+            <option value="3"> Laranja </option>
+            <option value="4"> Amarelo </option>
+            <option value="5"> Verde </option>
+            <option value="6"> Azul </option>
+            <option value="7"> Violeta </option>
+            <option value="8"> Cinza </option>
+            <option value="9"> Branco </option>
+            <option value=""> Dourado </option>
+            <option value=""> Prata </option>
+            <option value=""> Sem cor </option>
+        </select>
+        </p>
+        <p> <label for="fax2" > Faixa 2: </label>
+        <select name="cor1" id="faixa2">
+            <option value="0"> Preto </option>
+            <option value="1"> Marrom </option>
+            <option value="2"> Vermelho </option>
+            <option value="3"> Laranja </option>
+            <option value="4"> Amarelo </option>
+            <option value="5"> Verde </option>
+            <option value="6"> Azul </option>
+            <option value="7"> Violeta </option>
+            <option value="8"> Cinza </option>
+            <option value="9"> Branco </option>
+            <option value=""> Dourado </option>
+            <option value=""> Prata </option>
+            <option value=""> Sem cor </option>
+        </select>
+        </p>
+        <p> <label for="fax3" > Faixa 3: </label>
+        <select name="cor1" id="faixa3">
+            <option value="1"> Preto </option>
+            <option value="10"> Marrom </option>
+            <option value="100"> Vermelho </option>
+            <option value="1000"> Laranja </option>
+            <option value="10000"> Amarelo </option>
+            <option value="100000"> Verde </option>
+            <option value="1000000"> Azul </option>
+            <option value="10000000"> Violeta </option>
+            <option value=""> Cinza </option>
+            <option value=""> Branco </option>
+            <option value=""> Dourado </option>
+            <option value=""> Prata </option>
+            <option value=""> Sem cor </option>
+        </select>
+        </p>
+        <p> <label for="fax4" > Faixa 4: </label>
+        <select name="cor1" id="faixa4">
+            <option value="5"> Dourado </option>
+            <option value="10"> Prata </option>
+        </select>
+    </form>
+        <section>
+            <div > Valor Total: </div>
+            <div id="resultado">  </div>
+            <button type="button" onclick="valorTotal()"> Calcular </button>
+        </section>
+        <script> 
+
+            function valorTotal(){
+                let Fax1 = document.getElementById("faixa1").value
+                let Fax2 = document.getElementById("faixa2").value
+                let Fax3 = document.getElementById("faixa3").value
+                let Fax4 = document.getElementById("faixa4").value
+
+                let soma = (Fax1 + Fax2)
+                let mult = parseInt(soma * Fax3)
+                let valTotal = parseFloat(mult - (Fax4/100 * mult))
+
+                document.getElementById("resultado").innerHTML = valTotal
+            }
+        </script>
+        </p>
+</body>
+</html>
